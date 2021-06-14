@@ -7,10 +7,10 @@ public class HelloWorld {
         System.out.println("Enter something: ");
         String userInput = scanner.nextLine();
 
-        if(StringUtils.isNumeric(userInput)) {
-            System.out.println("User has entered a number");
+        if(!StringUtils.isNumeric(userInput)) {
+            System.out.println(userInput + " is not a number!");
         } else {
-            System.out.println("User has entered a string");
+            System.out.println(userInput);
         }
         System.out.println(StringUtils.swapCase(userInput));
         System.out.println(StringUtils.reverse(userInput));
